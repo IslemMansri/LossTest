@@ -66,8 +66,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Convert.cpp" />
-    <ClCompile Include="Lossh265.cpp" />
+    <ClCompile Include="Loss265.cpp" />
     <ClCompile Include="Loss.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="loss265.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

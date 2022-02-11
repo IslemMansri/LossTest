@@ -39,7 +39,7 @@
 #include <math.h>
 #include <float.h>
 #include <ctype.h>
-
+/*
 
 
 #define OPTIONCHAR '-'
@@ -47,9 +47,10 @@
 #define HM5_0_ANCHOR
 #define OLD_ERR_PAT_FORMAT
 
+
 static FILE *errfile, *infile, *outfile;
-static unsigned char nalu[MAXNALUNITSIZE];
-static int nalutypecountread[64], nalutypecountwrite[64];
+static unsigned char nalu[MAXNALUNITSIZE];	
+static int nalutypecountread[64], nalutypecountwrite[64];	
 
 static int nalusread = 0, naluswritten = 0;
 static int debuglevel = 1;				// default, can be overwritten by -d
@@ -260,26 +261,33 @@ int naluloss() {
 }
 #endif
 
-void parsecmd(int ac, char *av[]) {
+void parsecmd(int ac, char *av[]) 
+{
 	int i;
-	if (ac<4) {
+	if (ac<4) 
+	{
 		fprintf(stderr, "Usage: xxx\n");
 		exit(-1);
 	}
-	if ((infile = fopen(av[1], "rb")) == NULL) {
+	if ((infile = fopen(av[1], "rb")) == NULL) 
+	{
 		fprintf(stderr, "Cannot open infile %s\n", av[1]);
 		exit(-1);
 	}
-	if ((outfile = fopen(av[2], "wb")) == NULL) {
+	if ((outfile = fopen(av[2], "wb")) == NULL) 
+	{
 		fprintf(stderr, "Cannot open outfile %s\n", av[2]);
 		exit(-1);
 	}
-	if ((errfile = fopen(av[3], "r")) == NULL) {
+	if ((errfile = fopen(av[3], "r")) == NULL) 
+	{
 		fprintf(stderr, "Cannot open error file %s\n", av[3]);
 		exit(-1);
 	}
-	for (i = 4; i<ac; i++) {
-		if (av[i][0] != OPTIONCHAR) {
+	for (i = 4; i<ac; i++) 
+	{
+		if (av[i][0] != OPTIONCHAR) 
+		{
 			fprintf(stderr, "invalid option %s\n", av[i]);
 			exit(-1);
 		}
@@ -408,4 +416,4 @@ int nal_unit_type(unsigned char buf[]) {
 	}
 	return nalutype;
 }
-#endif
+#endif*/

@@ -1,7 +1,8 @@
-﻿  Loss.cpp
-c:\dev\cppseries\nalunitlosssimulator\nalunitlosssimulator\loss.cpp(35): fatal error C1083: Cannot open include file: 'stdafx.h': No such file or directory
-  Lossh265.cpp
-c:\dev\cppseries\nalunitlosssimulator\nalunitlosssimulator\lossh265.cpp(455): warning C4473: 'fprintf' : not enough arguments passed for format string
-  c:\dev\cppseries\nalunitlosssimulator\nalunitlosssimulator\lossh265.cpp(455): note: placeholders and their parameters expect 4 variadic arguments, but 3 were provided
-  c:\dev\cppseries\nalunitlosssimulator\nalunitlosssimulator\lossh265.cpp(455): note: the missing variadic argument 4 is required by format string '%d'
+﻿  main.cpp
+  Loss265.cpp
+c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(294): warning C4473: 'fprintf' : not enough arguments passed for format string
+  c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(294): note: placeholders and their parameters expect 4 variadic arguments, but 3 were provided
+  c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(294): note: the missing variadic argument 4 is required by format string '%d'
   Generating Code...
+  NalUnitLossSimulator.vcxproj -> C:\Dev\GitHub_Clone\GitHub\LossTest\NalUnitLossSimulator\Debug\NalUnitLossSimulator.exe
+  NalUnitLossSimulator.vcxproj -> C:\Dev\GitHub_Clone\GitHub\LossTest\NalUnitLossSimulator\Debug\NalUnitLossSimulator.pdb (Full PDB)

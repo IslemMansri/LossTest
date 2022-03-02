@@ -11,7 +11,7 @@ int readnalu(unsigned char *buf)
 	//Silx: Check if current position in NAL unit is a ZB_start code.
 	if (!ZB_startcode()) 
 	{					// can be no ZB_startcode in file at this position or EOF     //Silx: EOF EndOfFile!
-		if (feof(infile)) 
+		if (feof(infile))
 		{					
 											//Silx: Check if current position is a start code or not (1 yes, 0 no).
 			// EOF found at the position of the first octet of the start code.
@@ -59,6 +59,17 @@ int readnalu(unsigned char *buf)
 		printf("NAL unit length %d at pos %d first bytes of nalu: %x %x %x %x %x %x",
 		pos, ftell(infile) - pos, buf[0], buf[1], buf[2], buf[3], buf[4], buf[5]);
 	return pos;
+}
+
+void writenalu(unsigned char *buf, int size) 
+{
+	if (fwrite(buf, 1, size, outfile) != size) 
+	{
+		fprintf(stderr, "Cannot write %d bytes to outfile, exiting\n", size);
+		exit(-1);
+	}
+	naluswritten++;
+	nalutypecountwrite[nal_unit_type(buf)]++;
 }
 
 int ZB_startcode() 
@@ -122,17 +133,6 @@ int ZB_startcode()
 	return (1);
 }
 
-void writenalu(unsigned char *buf, int size) 
-{
-	if (fwrite(buf, 1, size, outfile) != size) 
-	{
-		fprintf(stderr, "Cannot write %d bytes to outfile, exiting\n", size);
-		exit(-1);
-	}
-	naluswritten++;
-	nalutypecountwrite[nal_unit_type(buf)]++;
-}
-
 //Silx: This part of code I think is for testing the errfile (make sure that no whitespace is in it)
 #ifdef OLD_ERR_PAT_FORMAT
 int naluloss() 
@@ -146,8 +146,7 @@ int naluloss()
 		fseek(errfile, 0, SEEK_SET);
 		c = getc(errfile);
 	}
-	while (isspace(c))
-		;		// Skip over whitespace
+	while (isspace(c));		// Skip over whitespace
 	return (c == '0');
 }
 #endif

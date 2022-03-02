@@ -31,19 +31,13 @@ static int debuglevel = 1;				// default, can be overwritten by -d
 static int applyerrors = 1;				// default, parameter sets make it, can be overridden by -a
 
 void parsecmd(int ac, char *av[]);		// parses commandline and opens files, writes global statics
-
 int readnalu(unsigned char *buf);		// returns size of read nal unit
-
+void writenalu(unsigned char *buf, int size);		// write nalu
 int ZB_startcode();						// reads in infile, returns 1 if current pos in file infile is a ZB_startcode,
 										// and 0 otherwise.  No side effects but cleanup()and exit() when end of
 										// input bitstream is reached at start code boundary.
-
-void writenalu(unsigned char *buf, int size);		// write nalu
-
 int nal_unit_type(unsigned char *buf);		// returns the nal_unit_type of the nal unit in buf
-
 int naluloss();							// return 1 if nal unit is lost, 0 otherwise.
-
 void cleanup();							// closes files, print statistics, etc.
 
 

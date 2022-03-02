@@ -1,8 +1,10 @@
-﻿  main.cpp
-  Loss265.cpp
-c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(294): warning C4473: 'fprintf' : not enough arguments passed for format string
-  c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(294): note: placeholders and their parameters expect 4 variadic arguments, but 3 were provided
-  c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(294): note: the missing variadic argument 4 is required by format string '%d'
+﻿  Loss265.cpp
+c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(293): warning C4473: 'fprintf' : not enough arguments passed for format string
+  c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(293): note: placeholders and their parameters expect 4 variadic arguments, but 3 were provided
+  c:\dev\github_clone\github\losstest\nalunitlosssimulator\nalunitlosssimulator\loss265.cpp(293): note: the missing variadic argument 4 is required by format string '%d'
+  Generating Code...
+  Compiling...
+  main.cpp
   Generating Code...
   NalUnitLossSimulator.vcxproj -> C:\Dev\GitHub_Clone\GitHub\LossTest\NalUnitLossSimulator\Debug\NalUnitLossSimulator.exe
   NalUnitLossSimulator.vcxproj -> C:\Dev\GitHub_Clone\GitHub\LossTest\NalUnitLossSimulator\Debug\NalUnitLossSimulator.pdb (Full PDB)

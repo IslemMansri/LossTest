@@ -4,7 +4,9 @@ Loss265.cpp(294): warning C4473: 'fprintf' : not enough arguments passed for for
   Loss265.cpp(294): note: the missing variadic argument 4 is required by format string '%d'
   main.cpp
   Generating code
-  All 13 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 13 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   NalUnitLossSimulator.vcxproj -> C:\Dev\GitHub_Clone\GitHub\LossTest\NalUnitLossSimulator\Release\NalUnitLossSimulator.exe
   NalUnitLossSimulator.vcxproj -> C:\Dev\GitHub_Clone\GitHub\LossTest\NalUnitLossSimulator\Release\NalUnitLossSimulator.pdb (Full PDB)
